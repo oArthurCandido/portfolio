@@ -1,5 +1,11 @@
 import React from "react";
 import { stackIcons, StackIconsInterface } from "../icons/StackIcons";
+import {
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+  TooltipProvider,
+} from "@/components/ui/Tooltip";
 
 interface CardProps {
   title: string;
@@ -21,9 +27,16 @@ const ProjectCard = ({
       <div className="flex flex-col justify-between flex-wrap">
         <span className="flex mx-auto mt-1">
           {stack.map((elem: string) => (
-            <span key={elem} className="mx-1">
-              {stackIcons[elem]}
-            </span>
+            <TooltipProvider key={elem}>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <span className="mx-1 dark:hover:text-indigo-600 hover:text-black">
+                    {stackIcons[elem]}
+                  </span>
+                </TooltipTrigger>
+                <TooltipContent>{elem.toUpperCase()}</TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           ))}
         </span>
         <h1 className="text-xl mt-1 font-extrabold">{title}</h1>
@@ -32,12 +45,12 @@ const ProjectCard = ({
         <span className="font-extrabold text-lg font">Descrição:</span>
         <p className="font-sans inline ml-1">{description.split("|")[1]}</p>
       </div>
-      <div className="mt-1">
-        <a className="block" href={repoLink}>
-          Link repositório
+      <div className="mt-1 text-indigo-700 dark:text-indigo-400 font-bold ">
+        <a className="block " href={repoLink} target="_blank">
+          Link do repositório
         </a>
-        <a href={productionLink} target="_blank">
-          Link produção
+        <a className=" block mt-2" href={productionLink} target="_blank">
+          Link do app ao vivo
         </a>
       </div>
     </div>

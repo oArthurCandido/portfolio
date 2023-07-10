@@ -12,10 +12,10 @@ const TopSection = () => {
       />
       <LeftFLuidLine props={""} className="absolute left-0 top-28" />
       <div className="relative h-[93vh] flex items-center justify-center flex-col">
-        <p className="dark:text-rebel-pink dark:bg-rebel-black bg-white text-rebel-black text-4xl md:text-6xl font-extraextrabold text-center">
+        <p className="dark:text-rebel-pink dark:bg-black bg-white  text-4xl md:text-6xl font-extrabold text-center">
           Desenvolvedor WEB
         </p>
-        <p className="text-slate-700 bg-white dark:bg-rebel-black dark:text-amber-50 text-center mx-2 my-4 font-semibold text-xl font-sans  max-w-xl leading-relaxed">
+        <p className=" bg-white dark:bg-black text-center mx-2 my-4 font-semibold text-xl font-sans  max-w-xl leading-relaxed">
           Eu desenvolvo experiências digitais que conectam marcas e pessoas,
           produtos e usuários, necessidades e oportunidades. Conecte-se comigo
           para construírmos juntos o seu projeto
