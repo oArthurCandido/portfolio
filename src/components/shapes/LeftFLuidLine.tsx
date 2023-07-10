@@ -11,10 +11,10 @@ const LeftFLuidLine = ({ className, props }: Props) => {
       xmlns="http://www.w3.org/2000/svg"
       width="360"
       height="1029"
-      viewBox="0 0 360 1029"
+      viewBox="0 0 410 1029"
       id="sauce-drip-outline"
       data-shape="true"
-      className={`${className} `}
+      className={`${className} z-[-1]`}
     >
       <path
         fill="none"

@@ -6,7 +6,7 @@ const TopSection = () => {
   return (
     <section className="flex justify-center  ">
       <ThreeZigZag
-        className="absolute bottom-0 sm:bottom-10 right-0 w-1/2 sm:w-2/6"
+        className="absolute bottom-0 sm:bottom-10 landscape:top-20 right-0 w-1/2 sm:w-2/6"
         stopColorL="#18F2B2"
         stopColorR="#EF13F2"
       />
