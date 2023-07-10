@@ -6,6 +6,7 @@ import {
   TooltipContent,
   TooltipProvider,
 } from "@/components/ui/Tooltip";
+import Link from "next/link";
 
 interface CardProps {
   title: string;
@@ -23,7 +24,7 @@ const ProjectCard = ({
   productionLink,
 }: CardProps) => {
   return (
-    <div className="p-1 mt-8 w-96 h-60 border dark:border-violet-700 rounded-md dark:hover:shadow-[#18f2b160] hover:shadow-lg">
+    <div className="p-1 mt-8 w-96 h-60 border dark:border-violet-700 rounded-md dark:hover:shadow-[#18f2b160] hover:shadow-lg bg-white dark:bg-black">
       <div className="flex flex-col justify-between flex-wrap">
         <span className="flex mx-auto mt-1">
           {stack.map((elem: string) => (
@@ -41,17 +42,17 @@ const ProjectCard = ({
         </span>
         <h1 className="text-xl mt-1 font-extrabold">{title}</h1>
       </div>
-      <div className="mt-1">
+      <div>
         <span className="font-extrabold text-lg font">Descrição:</span>
         <p className="font-sans inline ml-1">{description.split("|")[1]}</p>
       </div>
       <div className="mt-1 text-indigo-700 dark:text-indigo-400 font-bold ">
-        <a className="block " href={repoLink} target="_blank">
+        <Link className="block " href={repoLink} target="_blank">
           Link do repositório
-        </a>
-        <a className=" block mt-2" href={productionLink} target="_blank">
+        </Link>
+        <Link className=" block mt-2" href={productionLink} target="_blank">
           Link do app ao vivo
-        </a>
+        </Link>
       </div>
     </div>
   );

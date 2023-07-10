@@ -1,5 +1,6 @@
 import React from "react";
 import ModeToggle from "./ui/ModeToggle";
+import Link from "next/link";
 
 function Header() {
   return (
@@ -16,11 +17,11 @@ function Header() {
         </h2>
       </div>
       <nav className="sm:mx-4 dark:text-rebel-green text-rebel-purple flex flex-wrap w-full justify-end mx-2 items-center">
-        <a href="#projects" className="mr-2">
+        <Link href="#projects" className="mr-2">
           Projetos
-        </a>
+        </Link>
         <span className="w-[1px] bg-rebel-black mr-2"></span>
-        <a>Contato </a>
+        <Link href="#contact">Contato </Link>
         <ModeToggle />
       </nav>
     </header>
