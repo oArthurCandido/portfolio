@@ -50,9 +50,11 @@ const ProjectCard = ({
         <Link className="block " href={repoLink} target="_blank">
           Link do repositório
         </Link>
-        <Link className=" block mt-2" href={productionLink} target="_blank">
-          Link do app ao vivo
-        </Link>
+        {productionLink && (
+          <Link className=" block mt-2" href={productionLink} target="_blank">
+            Link do app ao vivo
+          </Link>
+        )}
       </div>
     </div>
   );
