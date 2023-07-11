@@ -5,12 +5,13 @@ import React from "react";
 const TopSection = () => {
   return (
     <section className="flex justify-center  ">
+      <LeftFLuidLine props={""} className="absolute left-0 top-28" />
       <ThreeZigZag
         className="absolute bottom-0 sm:bottom-10 landscape:top-20 right-0 w-1/2 sm:w-2/6"
         stopColorL="#18F2B2"
         stopColorR="#EF13F2"
       />
-      <LeftFLuidLine props={""} className="absolute left-0 top-28" />
+
       <div className="relative h-[93vh] flex items-center justify-center flex-col">
         <p className="dark:text-rebel-pink dark:bg-black bg-white  text-4xl md:text-6xl font-extrabold text-center">
           Desenvolvedor WEB

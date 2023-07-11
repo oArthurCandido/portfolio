@@ -17,7 +17,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="snap-y snap-proximity">
+    <html
+      lang="pt-br"
+      className="sm:snap-y sm:snap-proximity "
+      suppressHydrationWarning
+    >
       <body
         className={`${inter.className} dark:bg-black dark:text-slate-300 text-slate-700`}
       >

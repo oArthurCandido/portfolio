@@ -6,6 +6,13 @@ import {
   SiPrisma,
   SiGithub,
   SiGit,
+  SiHtml5,
+  SiCss3,
+  SiPython,
+  SiJavascript,
+  SiTypescript,
+  SiMui,
+  SiVite,
 } from "react-icons/si";
 
 // export const stackIcons = [
@@ -57,4 +64,18 @@ export const stackIcons: StackIconsInterface = {
   github: <SiGithub className=" text-4xl" />,
 
   git: <SiGit className=" text-4xl" />,
+
+  html: <SiHtml5 className=" text-4xl" />,
+
+  css: <SiCss3 className=" text-4xl" />,
+
+  python: <SiPython className=" text-4xl" />,
+
+  javascript: <SiJavascript className=" text-4xl" />,
+
+  typescript: <SiTypescript className=" text-4xl" />,
+
+  "material-ui": <SiMui className=" text-4xl" />,
+
+  vite: <SiVite className=" text-4xl" />,
 };
