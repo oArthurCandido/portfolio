@@ -5,12 +5,12 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="text-rebel-black snap-end flex items-center justify-center">
+    <footer className="text-rebel-black snap-end flex items-center justify-center mb-1">
       <Link href="https://github.com/oarthurcandido/" target="_blank">
-        <VscGithubAlt className=" text-5xl" />
+        <VscGithubAlt className="p-1 hover:border border-slate-600 rounded-md hover:bg-slate-200 dark:hover:bg-slate-800 text-6xl" />
       </Link>
       <Link href="https://www.linkedin.com/in/arthurcandido/" target="_blank">
-        <PiLinkedinLogoThin className=" text-6xl  " />
+        <PiLinkedinLogoThin className=" hover:border border-slate-600 rounded-md hover:bg-slate-200 dark:hover:bg-slate-800 text-6xl  " />
       </Link>
     </footer>
   );

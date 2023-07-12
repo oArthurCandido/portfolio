@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 
-const inter = Orbitron({ subsets: ["latin"] });
+const orbit = Orbitron({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Arthur Candido - Portfólio Frontend Developer",
@@ -24,7 +24,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body
-        className={`${inter.className} dark:bg-black dark:text-slate-300 text-slate-700`}
+        className={`${orbit.className} dark:bg-black dark:text-slate-300 text-slate-700`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />

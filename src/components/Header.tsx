@@ -2,7 +2,6 @@
 import React from "react";
 import ModeToggle from "./ui/ModeToggle";
 import Link from "next/link";
-import NavMenuMobile from "./ui/NavMenuMobile";
 import NavigationMobileMenu from "./ui/NavigationMobileMenu";
 
 function Header() {
@@ -27,7 +26,6 @@ function Header() {
       </nav>
       <div className="sm:hidden self-center mx-2 flex items-center justify-center align-middle">
         <NavigationMobileMenu />
-        {/* <NavMenuMobile /> */}
         <ModeToggle />
       </div>
     </header>
