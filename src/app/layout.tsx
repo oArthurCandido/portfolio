@@ -4,6 +4,7 @@ import { Orbitron } from "next/font/google";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
+import { Analytics } from "@vercel/analytics/react";
 
 const orbit = Orbitron({ subsets: ["latin"] });
 
@@ -30,10 +31,12 @@ export default function RootLayout({
           <Header />
           <div className="h-screen scroll-smooth ">
             {children}
+
             <Footer />
             <Toaster />
           </div>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
