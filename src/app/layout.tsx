@@ -3,6 +3,7 @@ import "./globals.css";
 import { Orbitron } from "next/font/google";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Orbitron({ subsets: ["latin"] });
 
@@ -30,6 +31,7 @@ export default function RootLayout({
           <div className="h-screen scroll-smooth ">
             {children}
             <Footer />
+            <Toaster />
           </div>
         </ThemeProvider>
       </body>
