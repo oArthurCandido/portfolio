@@ -2,6 +2,7 @@ import LeftFLuidLine from "@/components/shapes/LeftFLuidLine";
 import ThreeZigZag from "@/components/shapes/ThreeZigZag";
 import React from "react";
 import { Locale } from "@/lib/i18n-config";
+import ProgressScroll from "@/components/ui/ProgressScroll";
 
 const TopSection = ({
   dictionary,
@@ -31,6 +32,7 @@ const TopSection = ({
         <h3 className=" bg-white dark:bg-black text-center mx-2 my-4 font-semibold text-xl font-sans  max-w-xl leading-relaxed">
           {dictionary.aboutMe}
         </h3>
+        <ProgressScroll />
       </div>
     </section>
   );

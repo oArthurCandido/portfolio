@@ -1,11 +1,4 @@
 {
-    "server-component": {
-      "welcome": "Welcome"
-    },
-    "counter": {
-      "increment": "Increment",
-      "decrement": "Decrement"
-    },
     "top-nav": {
       "home": "Home",
       "about": "About",
@@ -14,5 +7,17 @@
       "webDeveloper": "WEB Developer",
       "aboutMe": "I develop digital experiences that connect brands and people, products and users, needs and opportunities. Reach me out so we can build your project together!"
 
+    },
+    "projects":{
+      "description": "Description",
+      "repositoryLink": "Repository Link",
+      "liveDemo": "Live Demo"
+    },
+    "contact":{
+      "sendMeAMessage": "Send me a message",
+      "callToAction": "Need a web developer, has a question or just want to say hi? Send me a message and I will get back to you as soon as possible",
+      "CV": "Curriculum in PDF",
+      "copiedToClipboard": "Email copied to clipboard!"
     }
+
   }

@@ -1,15 +1,19 @@
 {
-    "server-component": {
-      "welcome": "Bien Venue"
-    },
-    "counter": {
-      "increment": "Incrementer",
-      "decrement": "Decrementer"
-    },
     "top-nav": {
       "contact": "Contact",
       "projects": "Projets",
       "webDeveloper": "Développeur web",
       "aboutMe": "Je développe des expériences numériques qui connectent les marques et les personnes, les produits et les utilisateurs, les besoins et les opportunités. Contactez-moi pour construire ensemble votre projet!"
+    },
+    "projects":{
+      "description": "Description",
+      "repositoryLink": "Lien du repository",
+      "liveDemo": "Démo en ligne"
+    },
+    "contact":{
+      "sendMeAMessage": "Envoyez-moi un messag",
+      "callToAction": "Vous avez besoin d'un développeur web, vous avez une question ou vous voulez juste dire bonjour ? Envoyez-moi un message et je vous répondrai dans les plus brefs délais",
+      "CV": "Cursus en PDF",
+      "copiedToClipboard": "Email copié dans le presse-papier!"
     }
   }

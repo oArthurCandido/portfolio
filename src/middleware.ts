@@ -25,9 +25,7 @@ function getLocale(request: NextRequest): string | undefined {
 }
 
 export function middleware(request: NextRequest) {
-  console.log('passei aqui',request)
   const pathname = request.nextUrl.pathname
-
   
 
   // `/_next/` and `/api/` are ignored by the watcher, but we need to ignore files in `public` manually.
@@ -36,7 +34,7 @@ export function middleware(request: NextRequest) {
     [
       '/manifest.json',
       '/favicon.ico',
-      '/CV Arthur Candido.pdf'
+      '/CV-Arthur-Candido.pdf'
       // Your other files in `public`
     ].includes(pathname)
   )
