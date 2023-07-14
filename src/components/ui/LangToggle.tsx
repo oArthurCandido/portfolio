@@ -11,6 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/Dropdown-menu";
 import { Button } from "@/components/ui/Button";
+import { US, FR, BR } from "country-flag-icons/react/3x2";
 
 const LangToggle = () => {
   const pathName = usePathname();
@@ -20,6 +21,13 @@ const LangToggle = () => {
     segments[1] = locale;
     return segments.join("/");
   };
+
+  const flags = {
+    en: <US />,
+    fr: <FR />,
+    pt: <BR />,
+  };
+
   return (
     <div className="ml-1">
       <DropdownMenu>
@@ -30,11 +38,16 @@ const LangToggle = () => {
             <span className="sr-only">Toggle theme</span>
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="start">
+        <DropdownMenuContent align="center">
           {i18n.locales.map((locale) => {
             return (
               <DropdownMenuItem key={locale}>
-                <Link href={redirectedPathName(locale)}>{locale}</Link>
+                <Link className="w-full" href={redirectedPathName(locale)}>
+                  <div className="flex w-12">
+                    <p className="w-10">{locale}</p>
+                    {flags[locale]}
+                  </div>
+                </Link>
               </DropdownMenuItem>
             );
           })}

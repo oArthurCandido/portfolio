@@ -11,13 +11,13 @@ export default async function Home({
   params: { lang: Locale };
 }) {
   const dictionary = await getDictionary(lang);
-  console.log(dictionary);
+
   return (
     <div>
       {/* <LocaleSwitcher /> */}
       <TopSection dictionary={dictionary["top-nav"]} />
-      <ProjectsSession />
-      <ContactSession />
+      <ProjectsSession dictionary={dictionary["projects"]} />
+      <ContactSession dictionary={dictionary["contact"]} />
     </div>
   );
 }
