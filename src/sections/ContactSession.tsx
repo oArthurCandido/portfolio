@@ -11,7 +11,16 @@ import ThreeZigZag from "@/components/shapes/ThreeZigZag";
 
 const TIMEOUT_MS = 2000;
 
-const ContactSession = () => {
+const ContactSession = ({
+  dictionary,
+}: {
+  dictionary: {
+    sendMeAMessage: string;
+    callToAction: string;
+    CV: string;
+    copiedToClipboard: string;
+  };
+}) => {
   const [hasCopied, setHasCopied] = useState(false);
   const timeoutRef = useRef(0);
   const { toast } = useToast();
@@ -27,7 +36,7 @@ const ContactSession = () => {
 
   const handleOnClick = () => {
     toast({
-      description: "Email copiado para a área de transferência.",
+      description: dictionary.copiedToClipboard,
     });
     CopyToClipboard("oarthurcandido@gmail.com")?.then((res) => {
       setHasCopied(true);
@@ -53,13 +62,12 @@ const ContactSession = () => {
               <div className="flex items-center mx-4 justify-center">
                 <SiWhatsapp className="bg-white dark:bg-black mr-1 text-8xl sm:text-4xl lg:text-5xl" />
                 <p className="bg-white dark:bg-black cursor-pointer font-bold my-6 text-rebel-pink text-4xl lg:text-6xl font-extraextrabold text-center">
-                  Me envie uma mensagem!
+                  {dictionary.sendMeAMessage}!
                 </p>
               </div>
             </Link>
             <p className="bg-white dark:bg-black text-center">
-              Precisa de web dev, tem uma dúvida, uma proposta ou quer apenas
-              bater um papo, entre em contato.
+              {dictionary.callToAction}.
             </p>
             <div className="bg-white dark:bg-black border p-2 rounded-md mt-2 flex items-center">
               <p>oarthurcandido@gmail.com</p>
@@ -78,8 +86,8 @@ const ContactSession = () => {
           </div>
           <Button className="  mt-2">
             {" "}
-            <a href="/CV Arthur Candido.pdf" target="_blank">
-              Currículo em PDF
+            <a href="/CV-Arthur-Candido.pdf" target="_blank">
+              {dictionary.CV}
             </a>
           </Button>
         </div>

@@ -11,7 +11,15 @@ interface Project {
   topics: string[];
 }
 
-const ProjectsSession = () => {
+interface Dictionary {
+  dictionary: {
+    description: string;
+    repositoryLink: string;
+    liveDemo: string;
+  };
+}
+
+const ProjectsSession = ({ dictionary }: Dictionary) => {
   const [allProjects, setAllProjects] = React.useState([]);
   const [filteredProjects, setFilteredProjects] = React.useState([]);
   const [description, setDescription] = React.useState("");
@@ -41,10 +49,11 @@ const ProjectsSession = () => {
       <div className="mx-auto max-w-5xl pt-10 flex justify-evenly  flex-wrap  w-full h-full">
         {filteredProjects.map((project: Project) => (
           <ProjectCard
+            dictionary={dictionary}
             key={project.name}
             title={project.name}
             stack={project.topics}
-            description={project.description}
+            fullDescription={project.description}
             repoLink={project.html_url}
             productionLink={project.homepage}
           ></ProjectCard>
