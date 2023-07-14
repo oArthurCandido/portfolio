@@ -1,0 +1,18 @@
+{
+    "server-component": {
+      "welcome": "Welcome"
+    },
+    "counter": {
+      "increment": "Increment",
+      "decrement": "Decrement"
+    },
+    "top-nav": {
+      "home": "Home",
+      "about": "About",
+      "contact": "Contact",
+      "projects": "Projects",
+      "webDeveloper": "WEB Developer",
+      "aboutMe": "I develop digital experiences that connect brands and people, products and users, needs and opportunities. Reach me out so we can build your project together!"
+
+    }
+  }

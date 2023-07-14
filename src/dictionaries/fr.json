@@ -1,0 +1,15 @@
+{
+    "server-component": {
+      "welcome": "Bien Venue"
+    },
+    "counter": {
+      "increment": "Incrementer",
+      "decrement": "Decrementer"
+    },
+    "top-nav": {
+      "contact": "Contact",
+      "projects": "Projets",
+      "webDeveloper": "Développeur web",
+      "aboutMe": "Je développe des expériences numériques qui connectent les marques et les personnes, les produits et les utilisateurs, les besoins et les opportunités. Contactez-moi pour construire ensemble votre projet!"
+    }
+  }

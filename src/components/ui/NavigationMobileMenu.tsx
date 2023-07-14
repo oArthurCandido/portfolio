@@ -17,8 +17,8 @@ const NavigationMobileMenu = () => {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>
+        <NavigationMenuItem id="NavigationMenuItemMobile">
+          <NavigationMenuTrigger id="NavigationMenuTriggerMobile">
             {/* <p className="text-base">Menu</p> */}
 
             <svg
@@ -35,7 +35,10 @@ const NavigationMobileMenu = () => {
               />
             </svg>
           </NavigationMenuTrigger>
-          <NavigationMenuContent>
+          <NavigationMenuContent
+            className="relative left-[-10]"
+            id="NavigationMenuContentMobile"
+          >
             <ul>
               <ListItem href="#projects" title="Projetos"></ListItem>
               <ListItem href="#contact" title="Contato"></ListItem>
