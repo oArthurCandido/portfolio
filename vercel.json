@@ -2,27 +2,27 @@
     "rewrites":[
         {
             "source": "/en/pokememo", 
-            "destination": "https://pokememoria-g0enmtpjj-oarthurcandido.vercel.app/pokememo"
+            "destination": "https://pokememo.arthurcandido.dev/"
         },
         {
             "source": "/pt/pokememo/", 
-        "destination": "https://pokememoria-g0enmtpjj-oarthurcandido.vercel.app/pokememo/"
+        "destination": "https://pokememo.arthurcandido.dev/"
     },
         {
             "source": "/fr/pokememo", 
-        "destination": "https://pokememoria-g0enmtpjj-oarthurcandido.vercel.app/pokememo/"
+        "destination": "https://pokememo.arthurcandido.dev/"
     },
         {
             "source": "/pokememo", 
-            "destination": "https://pokememoria-g0enmtpjj-oarthurcandido.vercel.app/pokememo/"
+            "destination": "https://pokememo.arthurcandido.dev/"
         },
         {
             "source": "/pokememo/",
-            "destination": "https://pokememoria-g0enmtpjj-oarthurcandido.vercel.app/pokememo/"
+            "destination": "https://pokememo.arthurcandido.dev/"
         },
         {
             "source": "/pokememo/:slug*",
-            "destination": "https://pokememoria-g0enmtpjj-oarthurcandido.vercel.app/pokememo/"
+            "destination": "https://pokememo.arthurcandido.dev/"
         }
     ]
 }
