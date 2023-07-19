@@ -8,6 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { i18n } from "@/lib/i18n-config";
 import { getDictionary } from "@/lib/get-dictionary";
 import { Locale } from "@/lib/i18n-config";
+import GoogleAnalytics from "@/lib/GoogleAnalytics";
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
@@ -15,10 +16,19 @@ export async function generateStaticParams() {
 
 const orbit = Orbitron({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Arthur Candido - Portfólio Frontend Developer",
-  description: "Portfólio de Arthur Candido - Desenvolvedor Frontend",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: { lang: string };
+}) {
+  const lang = params.lang as Locale;
+
+  const dictionary = await getDictionary(lang);
+  return {
+    title: dictionary.metadata.title,
+    description: dictionary.metadata.description,
+  };
+}
 
 export default async function RootLayout({
   children,
@@ -37,6 +47,11 @@ export default async function RootLayout({
       className="sm:snap-y sm:snap-proximity "
       suppressHydrationWarning
     >
+      {process.env.GA_TRACKING_ID && (
+        <GoogleAnalytics
+          GA_TRACKING_ID={process.env.GA_TRACKING_ID as string}
+        />
+      )}
       <body
         className={`${orbit.className} dark:bg-black dark:text-slate-300 text-slate-700`}
       >

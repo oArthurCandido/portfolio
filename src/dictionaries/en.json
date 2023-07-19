@@ -18,6 +18,10 @@
       "callToAction": "Need a web developer, has a question or just want to say hi? Send me a message and I will get back to you as soon as possible",
       "CV": "Curriculum in PDF",
       "copiedToClipboard": "Email copied to clipboard!"
+    },
+    "metadata":{
+      "title": "Arthur's Web Developer Portfolio",
+      "description": "Arthur's Candido Frontend Web Developer Portfolio"
     }
 
   }
