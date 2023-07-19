@@ -1,5 +1,5 @@
 {
     "rewrites":[
-        {"source": "/pokememo/", "destination": "https://pokememoria.vercel.app/pokememo"}
+        {"source": "/pokememo/", "destination": "https://pokememoria-g0enmtpjj-oarthurcandido.vercel.app/pokememo"}
     ]
 }
