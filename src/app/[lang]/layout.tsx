@@ -48,7 +48,9 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       {process.env.GA_TRACKING_ID && (
-        <GoogleAnalytics GA_TRACKING_ID={process.env.GA_TRACKING_ID} />
+        <GoogleAnalytics
+          GA_TRACKING_ID={process.env.GA_TRACKING_ID as string}
+        />
       )}
       <body
         className={`${orbit.className} dark:bg-black dark:text-slate-300 text-slate-700`}
