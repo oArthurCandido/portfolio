@@ -9,6 +9,7 @@ import { i18n } from "@/lib/i18n-config";
 import { getDictionary } from "@/lib/get-dictionary";
 import { Locale } from "@/lib/i18n-config";
 import GoogleAnalytics from "@/lib/GoogleAnalytics";
+import HotJar from "@/lib/HotJar";
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
@@ -52,6 +53,7 @@ export default async function RootLayout({
           GA_TRACKING_ID={process.env.GA_TRACKING_ID as string}
         />
       )}
+      <HotJar />
       <body
         className={`${orbit.className} dark:bg-black dark:text-slate-300 text-slate-700`}
       >
