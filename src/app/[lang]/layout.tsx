@@ -17,11 +17,12 @@ export async function generateStaticParams() {
 
 const orbit = Orbitron({ subsets: ["latin"] });
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { lang: string };
-}) {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ lang: string }>;
+  }
+) {
+  const params = await props.params;
   const lang = params.lang as Locale;
 
   const dictionary = await getDictionary(lang);
@@ -31,13 +32,18 @@ export async function generateMetadata({
   };
 }
 
-export default async function RootLayout({
-  children,
-  params,
-}: {
-  children: React.ReactNode;
-  params: { lang: string };
-}) {
+export default async function RootLayout(
+  props: {
+    children: React.ReactNode;
+    params: Promise<{ lang: string }>;
+  }
+) {
+  const params = await props.params;
+
+  const {
+    children
+  } = props;
+
   const lang = params.lang as Locale;
 
   const dictionary = await getDictionary(lang);

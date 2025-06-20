@@ -1,3 +1,4 @@
+import React from "react";
 import {
   SiTailwindcss,
   SiNextdotjs,
@@ -47,7 +48,7 @@ import {
 // ];
 
 export interface StackIconsInterface {
-  [key: string]: JSX.Element;
+  [key: string]: React.JSX.Element;
 }
 
 export const stackIcons: StackIconsInterface = {
