@@ -34,7 +34,9 @@ export function middleware(request: NextRequest) {
     [
       '/manifest.json',
       '/favicon.ico',
-      '/CV-Arthur-Candido.pdf'
+      '/CV-Arthur-Candido.pdf',
+      '/curriculum-arthur-candido-eng-2025.pdf',
+      '/curriculo-arthur-candido-ptbr-2025.pdf',
       // Your other files in `public`
     ].includes(pathname)
   )

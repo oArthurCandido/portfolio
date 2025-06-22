@@ -14,69 +14,48 @@ import {
   SiTypescript,
   SiMui,
   SiVite,
+  SiAstro,
+  SiSanity
 } from "react-icons/si";
 
-// export const stackIcons = [
-//   {
-//     name: "TailwindCSS",
-//     icon: <SiTailwindcss className="text-rebel-pink text-4xl" />,
-//   },
-//   {
-//     name: "NextJS",
-//     icon: <SiNextdotjs className="text-rebel-pink text-4xl" />,
-//   },
-//   {
-//     name: "ReactJS",
-//     icon: <SiReact className="text-rebel-pink text-4xl" />,
-//   },
-//   {
-//     name: "Supabase",
-//     icon: <SiSupabase className="text-rebel-pink text-4xl" />,
-//   },
-//   {
-//     name: "Prisma",
-//     icon: <SiPrisma className="text-rebel-pink text-4xl" />,
-//   },
-//   {
-//     name: "Github",
-//     icon: <SiGithub className="text-rebel-pink text-4xl" />,
-//   },
-//   {
-//     name: "Git",
-//     icon: <SiGit className="text-rebel-pink text-4xl" />,
-//   },
-// ];
-
 export interface StackIconsInterface {
-  [key: string]: React.JSX.Element;
+  [key: string]: React.ComponentType<{ className?: string }>;
 }
 
 export const stackIcons: StackIconsInterface = {
-  tailwind: <SiTailwindcss className=" text-4xl" />,
+  tailwind: SiTailwindcss,
 
-  nextjs: <SiNextdotjs className=" text-4xl" />,
+   nextjs: SiNextdotjs,
 
-  reactjs: <SiReact className=" text-4xl" />,
+  reactjs: SiReact,
 
-  supabase: <SiSupabase className=" text-4xl" />,
+  supabase: SiSupabase,
 
-  prisma: <SiPrisma className=" text-4xl" />,
+  prisma: SiPrisma,
 
-  github: <SiGithub className=" text-4xl" />,
+  github: SiGithub,
 
-  git: <SiGit className=" text-4xl" />,
+  git: SiGit,
 
-  html: <SiHtml5 className=" text-4xl" />,
+  html: SiHtml5,
 
-  css: <SiCss3 className=" text-4xl" />,
+  css: SiCss3,
+  
+  html5: SiHtml5,
 
-  python: <SiPython className=" text-4xl" />,
+  css3: SiCss3,
 
-  javascript: <SiJavascript className=" text-4xl" />,
+  python: SiPython,
 
-  typescript: <SiTypescript className=" text-4xl" />,
+  javascript: SiJavascript,
 
-  "material-ui": <SiMui className=" text-4xl" />,
+  typescript: SiTypescript,
 
-  vite: <SiVite className=" text-4xl" />,
+  "material-ui": SiMui,
+
+  vite: SiVite,
+
+  astrojs: SiAstro,
+
+  sanity: SiSanity
 };

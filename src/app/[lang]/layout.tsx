@@ -51,7 +51,6 @@ export default async function RootLayout(
   return (
     <html
       lang={params.lang}
-      className="sm:snap-y sm:snap-proximity "
       suppressHydrationWarning
     >
       {process.env.GA_TRACKING_ID && (
