@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import LeftFLuidLine from "@/components/shapes/LeftFLuidLine";
 import ProjectCard from "@/components/ui/ProjectCard";
 import React from "react";
@@ -19,25 +19,10 @@ interface Dictionary {
   };
 }
 
-const ProjectsSession = ({ dictionary }: Dictionary) => {
-  const [allProjects, setAllProjects] = React.useState([]);
-  const [filteredProjects, setFilteredProjects] = React.useState([]);
-  const [description, setDescription] = React.useState("");
-
-  React.useEffect(() => {
-    fetch("https://api.github.com/users/oarthurcandido/repos")
-      .then((res) => res.json())
-      .then((data) => setAllProjects(data))
-      .catch((err) => console.error(err));
-  }, []);
-
-  React.useEffect(() => {
-    setFilteredProjects(
-      allProjects.filter(
-        (project: Project) => project.topics.includes("gotoportfolio") === true
-      )
-    );
-  }, [allProjects]);
+const ProjectsSession = async ({ dictionary }: Dictionary) => {
+    const response = await fetch("https://api.github.com/users/oarthurcandido/repos?per_page=100");
+    const repos = await response.json();
+    const filteredProjects = repos.filter((project: Project) => project.topics.includes("gotoportfolio") === true)
 
   return (
     <section id="projects" className="relative min-h-screen snap-start">
@@ -46,7 +31,7 @@ const ProjectsSession = ({ dictionary }: Dictionary) => {
         className="transform scale-x-[-1] absolute right-0 bottom-28"
         color="#EF13F2"
       />
-      <div className="mx-auto max-w-5xl pt-10 flex justify-evenly  flex-wrap  w-full h-full">
+      <div className="grid w-full h-full grid-cols-1 gap-4 px-2 pt-10 mx-auto max-w-7xl md:grid-cols-2 2xl:grid-cols-3 justify-evenly">
         {filteredProjects.map((project: Project) => (
           <ProjectCard
             dictionary={dictionary}
