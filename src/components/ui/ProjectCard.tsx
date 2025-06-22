@@ -32,38 +32,42 @@ const ProjectCard = ({
   const isPt = dictionary.description === "Descrição" ? 1 : 0;
 
   return (
-    <div className="p-1 mt-8 w-96 h-60 border dark:border-violet-700 rounded-md dark:hover:shadow-[#18f2b160] hover:shadow-lg bg-white dark:bg-black">
-      <div className="flex flex-col justify-between flex-wrap">
+    <div className="py-6 px-8 mt-8 border dark:border-violet-700 rounded-md dark:hover:shadow-[#18f2b160] hover:shadow-lg bg-white dark:bg-black">
+      <div className="flex flex-col flex-wrap justify-between">
         <span className="flex mx-auto mt-1">
           {stack.map((elem: string) => (
-            <TooltipProvider key={elem}>
+             stackIcons[elem] ?
+              <TooltipProvider key={elem}>
               <Tooltip>
                 <TooltipTrigger asChild>
                   <span className="mx-1 dark:hover:text-indigo-600 hover:text-black">
-                    {stackIcons[elem]}
+                    {React.createElement(stackIcons[elem], { className: "text-4xl" })}
                   </span>
                 </TooltipTrigger>
                 <TooltipContent>{elem.toUpperCase()}</TooltipContent>
               </Tooltip>
             </TooltipProvider>
+            :
+            null
+          
           ))}
         </span>
-        <h1 className="text-xl mt-1 font-extrabold">{title}</h1>
+        <h1 className="mt-6 text-2xl font-extrabold capitalize">{title.replace("-", " ")}</h1>
       </div>
-      <div>
-        <span className="font-extrabold text-lg font">
+      <div className="mt-2">
+        <span className="text-lg font-extrabold font">
           {dictionary.description}:
         </span>
-        <p className="font-sans inline ml-1">
+        <p className="inline ml-1 font-sans">
           {fullDescription.split("|")[isPt]}
         </p>
       </div>
-      <div className="mt-1 text-indigo-700 dark:text-indigo-400 font-bold ">
-        <Link className="block " href={repoLink} target="_blank">
+      <div className="mt-2 font-bold text-indigo-700 transition dark:text-indigo-400" >
+        <Link className="block transition duration-300 hover:text-black hover:dark:text-white" href={repoLink} target="_blank">
           {dictionary.repositoryLink}
         </Link>
         {productionLink && (
-          <Link className=" block mt-2" href={productionLink} target="_blank">
+          <Link className="block mt-1 transition duration-300 hover:text-black hover:dark:text-white" href={productionLink} target="_blank">
             {dictionary.liveDemo}
           </Link>
         )}
