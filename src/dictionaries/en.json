@@ -17,6 +17,7 @@
       "sendMeAMessage": "Send me a message",
       "callToAction": "Need a web developer, has a question or just want to say hi? Send me a message and I will get back to you as soon as possible",
       "CV": "Curriculum in PDF",
+      "CV_PATH": "/curriculum-arthur-candido-eng-2025.pdf",
       "copiedToClipboard": "Email copied to clipboard!"
     },
     "metadata":{

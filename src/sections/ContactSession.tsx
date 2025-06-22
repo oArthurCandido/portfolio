@@ -18,6 +18,7 @@ const ContactSession = ({
     sendMeAMessage: string;
     callToAction: string;
     CV: string;
+    CV_PATH: string;
     copiedToClipboard: string;
   };
 }) => {
@@ -52,29 +53,30 @@ const ContactSession = ({
           stopColorL="#EF13F2"
         />
         <div className="relative flex flex-col items-center justify-center h-full">
-          <div className="flex   flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center">
             <Link
               href={
                 "https://api.whatsapp.com/send?phone=5512992546899&text=Olá, vim pelo seu portfólio."
               }
               target="_blank"
+              className="transition duration-300 hover:opacity-80"
             >
-              <div className="flex items-center mx-4 justify-center">
-                <SiWhatsapp className="bg-white dark:bg-black mr-1 text-8xl sm:text-4xl lg:text-5xl" />
-                <p className="bg-white dark:bg-black cursor-pointer font-bold my-6 text-rebel-pink text-4xl lg:text-6xl font-extraextrabold text-center">
+              <div className="flex items-center justify-center mx-4">
+                <SiWhatsapp className="mr-1 bg-white dark:bg-black text-8xl sm:text-4xl lg:text-5xl" />
+                <p className="my-6 text-4xl font-bold text-center bg-white cursor-pointer dark:bg-black text-rebel-pink lg:text-6xl font-extraextrabold">
                   {dictionary.sendMeAMessage}!
                 </p>
               </div>
             </Link>
-            <p className="bg-white dark:bg-black text-center">
+            <p className="text-center bg-white dark:bg-black">
               {dictionary.callToAction}.
             </p>
-            <div className="bg-white dark:bg-black border p-2 rounded-md mt-2 flex items-center">
+            <div className="flex items-center p-2 mt-2 bg-white border rounded-md dark:bg-black">
               <p>oarthurcandido@gmail.com</p>
               <span className="ml-2">
                 {!hasCopied && (
                   <PiCopyBold
-                    className="cursor-pointer border p-1 text-3xl rounded-md dark:hover:bg-cyan-800 hover:bg-cyan-100"
+                    className="p-1 text-3xl border rounded-md cursor-pointer dark:hover:bg-cyan-800 hover:bg-cyan-100"
                     onClick={handleOnClick}
                   />
                 )}
@@ -84,11 +86,11 @@ const ContactSession = ({
               </span>
             </div>
           </div>
-          <Button className="  mt-2">
+          <Button className="mt-2 ">
             {" "}
-            <a href="/CV-Arthur-Candido.pdf" target="_blank">
+            <Link href={`${dictionary.CV_PATH}`} target="_blank">
               {dictionary.CV}
-            </a>
+            </Link>
           </Button>
         </div>
       </section>
