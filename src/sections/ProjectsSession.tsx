@@ -31,7 +31,7 @@ const ProjectsSession = async ({ dictionary }: Dictionary) => {
         className="transform scale-x-[-1] absolute right-0 bottom-28"
         color="#EF13F2"
       />
-      <div className="flex flex-wrap w-full h-full max-w-5xl pt-10 mx-auto justify-evenly">
+      <div className="grid w-full h-full grid-cols-1 gap-4 px-2 pt-10 mx-auto max-w-7xl md:grid-cols-2 2xl:grid-cols-3 justify-evenly">
         {filteredProjects.map((project: Project) => (
           <ProjectCard
             dictionary={dictionary}
